@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loutes Club</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="background">
+<div class="circle one"></div>
+<div class="circle two"></div>
+</div>
+
+<div class="card">
+<img src="231205.png" class="logo">
+<h2>Loutes Club</h2>
+<p class="subtitle">Login / Register</p>
+
+<div id="mobilePage">
+<div class="input-box">
+<i class="fa-solid fa-phone"></i>
+<input type="tel" id="mobile" placeholder="Enter Mobile Number" maxlength="10" inputmode="numeric">
+</div>
+<button class="main-btn" onclick="sendOTP()">Continue</button>
+</div>
+
+<div id="otpPage" style="display:none;">
+<div class="input-box">
+<i class="fa-solid fa-key"></i>
+<input type="text" id="otp" placeholder="Enter 6 Digit OTP" maxlength="6">
+</div>
+<button class="main-btn" onclick="verifyOTP()">Verify OTP</button>
+<p class="switch">Didn't receive OTP? <a href="#" onclick="sendOTP()">Resend</a></p>
+</div>
+
+<div id="passwordPage" style="display:none;">
+<div class="input-box">
+<i class="fa-solid fa-lock"></i>
+<input type="password" id="password" placeholder="Create Password">
+<span class="eye" onclick="togglePassword()"><i class="fa-solid fa-eye"></i></span>
+</div>
+<button class="main-btn" onclick="finishRegister()">Continue</button>
+</div>
+
+</div>
+
+<div id="recaptcha-container"></div>
+
+<script type="module" src="firebase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

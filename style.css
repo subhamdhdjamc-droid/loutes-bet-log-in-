@@ -1,0 +1,81 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:#0b0416;
+}
+
+.background{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.circle{
+position:absolute;
+border-radius:50%;
+filter:blur(110px);
+opacity:.9;
+}
+
+.one{
+width:350px;
+height:350px;
+background:#8a2be2;
+top:-120px;
+left:-120px;
+}
+
+.two{
+width:350px;
+height:350px;
+background:#5b5bff;
+bottom:-120px;
+right:-120px;
+}
+
+.card{
+width:92%;
+max-width:380px;
+padding:35px 25px;
+border-radius:28px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(22px);
+-webkit-backdrop-filter:blur(22px);
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 0 25px rgba(138,43,226,.35),0 0 60px rgba(138,43,226,.25),inset 0 0 1px rgba(255,255,255,.5);
+text-align:center;
+}
+
+.logo{width:95px;height:95px;border-radius:50%;border:3px solid #b26dff;box-shadow:0 0 25px #a855f7;margin-bottom:18px;object-fit:cover;}
+h2{font-size:32px;color:#fff;font-weight:700;}
+.subtitle{margin-top:8px;margin-bottom:28px;color:#d0d0d0;}
+.input-box{position:relative;margin-bottom:18px;}
+.input-box i{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:#b26dff;font-size:18px;}
+.input-box input{width:100%;height:58px;padding-left:50px;padding-right:50px;border:none;outline:none;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#fff;font-size:16px;transition:.3s;}
+.input-box input::placeholder{color:#c7c7c7;}
+.input-box input:focus{border:1px solid #c77dff;box-shadow:0 0 18px rgba(199,125,255,.6);}
+.eye{position:absolute;right:18px;top:50%;transform:translateY(-50%);cursor:pointer;color:#c77dff;}
+.eye i{position:static;}
+.main-btn{width:100%;height:58px;border:none;border-radius:16px;cursor:pointer;background:linear-gradient(135deg,#7b2cff,#c026ff);color:#fff;font-size:18px;font-weight:700;box-shadow:0 0 20px rgba(192,38,255,.55);transition:.3s;}
+.main-btn:hover{transform:translateY(-3px);box-shadow:0 0 35px rgba(192,38,255,.9);}
+.switch{margin-top:20px;color:#ddd;font-size:14px;}
+.switch a{color:#c77dff;font-weight:600;text-decoration:none;}
+.switch a:hover{text-decoration:underline;}
+@media(max-width:420px){
+.card{padding:28px 18px;}
+.logo{width:80px;height:80px;}
+h2{font-size:28px;}
+.main-btn{font-size:17px;}
+}
